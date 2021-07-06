@@ -1,0 +1,21 @@
+{
+  "params": {
+    "local_server": "True",
+    "local_uri": "mysql://root:@localhost/daily_blogs",
+    "prod_uri": "mysql://root:@localhost/daily_blogs",
+    "fb_url": "https://facebook.com/daily_blogs",
+    "tw_url": "https://twitter.com/daily_blogs",
+    "gh_url": "https://github.com/daily_blogs",
+    "title": "Daily Blog",
+    "sub_title": "Blog",
+    "tagline": "If you are Overthinking then write, If you are Underthinking then read, If you are Confused do both",
+    "gmail-user": "meetudemypassion@gmail.com",
+    "gmail-password": "heya@123",
+    "about_page": "Hello bloggers my name is Meet and i have created this Daily Blog page for you all. This is a blog page that is currently under development it will be available for everyone.",
+    "no_of_posts": 2,
+    "blog_name": "Daily Blog",
+    "admin_username": "adminuser",
+    "admin_password": "pass@321",
+    "upload_location": "C:\\Users\\meet\\Desktop\\Code here\\Flask Series\\static"
+  }
+}

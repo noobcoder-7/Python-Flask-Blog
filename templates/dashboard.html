@@ -1,0 +1,67 @@
+{% extends "layout.html" %} {% block body %}
+
+<!-- Page Header-->
+<header
+  class="masthead"
+  style="background-image: url('/static/assets/img/home-bg.jpg')"
+>
+  <div class="container position-relative px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-7">
+        <div class="site-heading">
+          <h1>Admin Panel</h1>
+          <span class="subheading">Great to have you back</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- Main Content-->
+<div class="container px-4 px-lg-5">
+  <class class="row gx-4 gx-lg-5 justify-content-center">
+    <div class="col-md-10 col-lg-8 col-xl-7">
+      <!-- Post preview-->
+
+      <h1>Welcome to your dashboard</h1>
+    </div>
+    <h2>Basic Actions</h2>
+    <div><a href="/add" button type="button" class="btn btn-outline-dark"">Add new post</a>
+    <a href="/logout" button type="button" class="btn btn-outline-dark"">Logout</a>
+    </div>
+    <hr>
+    <div>
+    <h2>Uploading files</h2>
+    <form action="/uploader" method="post" enctype="multipart/form-data">
+    <input type="file" name="file1" id="file1">
+    <button type="submit" class="btn btn-outline-dark"">Submit</button>
+    </form>
+</div>
+    <hr>
+    <table class="table table-dark">
+      <thead>
+        <tr>
+          <th scope="col">SNo</th>
+          <th scope="col">Title</th>
+          <th scope="col">Date</th>
+          <th scope="col">Edit</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for post in posts %}
+
+        <tr>
+          <td>{{post.sno}}</td>
+          <td>{{post.title}}</td>
+          <td>{{post.date}}</td>
+          <td><a href="/edit/{{post.sno}}" button type="button" class="btn btn-outline-light btn-sm"">Edit</button></td>
+          <td><a href="/delete/{{post.sno}}" button type="button" class="btn btn-outline-light btn-sm"">Delete</a></td>
+          
+        </tr>
+
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
